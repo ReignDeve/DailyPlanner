@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+:root {
+  --color-bg: rgba(17, 24, 39, 0.55);
+  --blur: 24px;
+  --color-accent: #60a5fa;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --radius: 18px;
+  --font-size: 14px;
+  --font-family:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--color-text);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+.app-shell {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition:
+    background 0.2s ease,
+    border-radius 0.2s ease;
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.todo-input:focus {
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.checkbox {
+  accent-color: var(--color-accent);
+}
+
+.todo-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.todo-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.todo-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}

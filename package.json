@@ -1,0 +1,41 @@
+{
+  "name": "lifeplanner",
+  "version": "0.1.0",
+  "description": "A modern, theme-able desktop To-Do widget for Windows and macOS",
+  "main": "./out/main/index.js",
+  "author": "Marius Bungert",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "tsc --build && electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "typecheck": "tsc --build --force",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "generate:icon": "node scripts/generate-icon.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "uuid": "^14.0.1",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "autoprefixer": "^10.5.2",
+    "electron": "^43.0.0",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6"
+  }
+}
