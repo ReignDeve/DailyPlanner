@@ -1,6 +1,6 @@
 {
   "name": "lifeplanner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A modern, theme-able desktop To-Do widget for Windows and macOS",
   "main": "./out/main/index.js",
   "author": "Marius Bungert",
