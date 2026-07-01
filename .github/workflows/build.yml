@@ -28,7 +28,7 @@ jobs:
 
       - name: Build (release, on tag push)
         if: startsWith(github.ref, 'refs/tags/v')
-        run: npx electron-builder --publish always
+        run: npm run build && npx electron-builder --publish always
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
