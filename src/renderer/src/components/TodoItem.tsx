@@ -60,7 +60,7 @@ export function TodoItem({ todo, onToggle, onEdit, onDelete }: TodoItemProps) {
       )}
       <button
         onClick={() => onDelete(todo.id)}
-        className="opacity-0 group-hover:opacity-100 transition-opacity w-5 h-5 rounded-full flex items-center justify-center hover:bg-white/10 shrink-0"
+        className="opacity-0 group-hover:opacity-100 transition-opacity w-5 h-5 rounded-full flex items-center justify-center hover:bg-white/10 shrink-0 leading-none"
         aria-label="Delete todo"
       >
         ×

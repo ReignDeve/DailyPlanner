@@ -25,7 +25,7 @@ export function AddTodoInput({ onAdd }: AddTodoInputProps) {
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleKeyDown}
         placeholder="Add a todo…"
-        className="todo-input w-full rounded-lg px-3 py-2 text-sm bg-white/10 placeholder-white/40 outline-none transition-shadow"
+        className="todo-input w-full rounded-lg px-3 py-2 text-sm outline-none transition-shadow"
         style={{ color: 'var(--color-text)' }}
       />
     </div>

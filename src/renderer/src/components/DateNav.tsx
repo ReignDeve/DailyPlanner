@@ -10,7 +10,7 @@ export function DateNav({ selectedDate, onChange }: DateNavProps) {
     <div className="no-drag flex items-center justify-between px-4 pb-2 shrink-0">
       <button
         onClick={() => onChange(addDays(selectedDate, -1))}
-        className="w-6 h-6 rounded-md flex items-center justify-center hover:bg-white/10"
+        className="w-6 h-6 rounded-md flex items-center justify-center hover:bg-white/10 leading-none"
         aria-label="Previous day"
       >
         ‹
@@ -24,7 +24,7 @@ export function DateNav({ selectedDate, onChange }: DateNavProps) {
       </button>
       <button
         onClick={() => onChange(addDays(selectedDate, 1))}
-        className="w-6 h-6 rounded-md flex items-center justify-center hover:bg-white/10"
+        className="w-6 h-6 rounded-md flex items-center justify-center hover:bg-white/10 leading-none"
         aria-label="Next day"
       >
         ›

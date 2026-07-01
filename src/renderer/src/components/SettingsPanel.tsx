@@ -29,7 +29,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
   return (
     <div
       className="no-drag absolute inset-0 flex flex-col"
-      style={{ background: 'var(--color-bg)', backdropFilter: 'blur(var(--blur))' }}
+      style={{ background: 'var(--color-panel-bg)' }}
     >
       <div className="drag-region flex items-center justify-between px-4 py-3 shrink-0">
         <span className="font-semibold" style={{ color: 'var(--color-text)' }}>
@@ -37,7 +37,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
         </span>
         <button
           onClick={onClose}
-          className="no-drag w-7 h-7 rounded-full flex items-center justify-center hover:bg-white/10"
+          className="no-drag w-7 h-7 rounded-full flex items-center justify-center hover:bg-white/10 leading-none"
           aria-label="Close settings"
         >
           ×

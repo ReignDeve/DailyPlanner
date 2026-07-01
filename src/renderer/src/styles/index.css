@@ -52,8 +52,19 @@ body {
   -webkit-app-region: no-drag;
 }
 
+.todo-input {
+  /* Adaptive background: 8% of text color — looks like a subtle tint on both light and dark themes */
+  background: color-mix(in srgb, var(--color-text) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-text) 14%, transparent);
+}
+
+.todo-input::placeholder {
+  color: var(--color-text-muted);
+}
+
 .todo-input:focus {
   box-shadow: 0 0 0 2px var(--color-accent);
+  border-color: transparent;
 }
 
 .checkbox {

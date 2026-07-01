@@ -11,7 +11,7 @@ export function TitleBar({ onOpenSettings }: TitleBarProps) {
       <div className="no-drag flex items-center gap-1">
         <button
           onClick={onOpenSettings}
-          className="w-7 h-7 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"
+          className="w-7 h-7 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors leading-none"
           aria-label="Settings"
           title="Settings"
         >
@@ -19,7 +19,7 @@ export function TitleBar({ onOpenSettings }: TitleBarProps) {
         </button>
         <button
           onClick={() => window.api.window.hide()}
-          className="w-7 h-7 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors"
+          className="w-7 h-7 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors leading-none"
           aria-label="Hide widget"
           title="Hide widget"
         >
